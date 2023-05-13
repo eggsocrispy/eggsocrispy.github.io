@@ -1,0 +1,75 @@
+---
+title: "A3: SPL Library Checkouts"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+
+### Load ALL necessary libraries
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(tidyverse)
+```
+
+  
+### Introduction
+I chose to analyze the 2017-2023-10-Checkouts-SPL-Dataset, and specifically the author Tolkien and his work. For my charts, I analyzed the checkouts over time of 3 books, checkouts by usage (digital vs physical), and checkouts by material type. I grew up reading alot of his work so I thought it would be cool to checkout how his book popularity and methods of book viewer on a more broad scale evolved over time.
+
+
+### Summary Information
+
+I chose to calculate the average number of checkouts for each book, the year with the most checkouts for "The Hobbit", the year for the least ebooks, the highest number of books sold in a year, and the least popular book. These are the values I computed for each:
+
+avg_checkouts: 
+  The Fellowship of the Ring: 29.567162
+  The Hobbit = 21.547953
+  The two Towers = 35.22500
+  
+Most checkouts year for "The Hobbit": 2022
+
+Year for least ebooks: 2023
+
+Highest sold in year: 7682
+
+Least popular book: "The two Towers"
+
+
+### The Dataset
+
+- Who collected/published the data?: The dataset was published by the Seattle Public library.
+- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?: The parameters include that the dates ran from 2017-2023, and that the checkouts only included transactions that were checked out at least 10 times a month. 
+- How was the data collected or generated?: The data was collected from the library electronic checkout system that was stored in a database. 
+- Why was the data collected?: The following data was primarily evaluated to discover trends on the performance of titles and books throughout the Seattle Public Library system. 
+- What, if any, ethical questions do you need to consider when working with this data?: There could be serious ethical implications surrounding what information is extracted out of the people borrowing the books. If it reveals too much about their personal identity and life, it could lead to negative reactions from the public. 
+- What are possible limitations or problems with this data?: There are a plethora of possible limitations or problems. To start, there could be alot of incompleteness in the data that passes through the systems. This could be related to both the hardware and software side of things that may cause errors in recordkeeping. THere is also the concern that the dataset only measured transactions that included 10+ books borrowed monthly, so would be leaving out a sizeable portion of people who still go to the library occasionally.
+
+
+
+### First Trends Over Time Chart
+
+
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+```
+
+
+The following chart shows how 3 titles I was interested in as a child evolved over time in terms of the total checkouts. This is important for avid J.R.R Tolkien fans as they would be able to identify how the books fare against each other and what types of titles fans typically enjoyed. It also serves as a metric for the performance and quality of the book for future readers who are interested in reading Tolkien's work. The graph shows that all 3 of the titles have grown, and so it signals that Tolkien's popularity across these 3 titles are growing year by year in the Seattle area. 
+
+### Second Trends Over Time Chart
+```{r, echo = FALSE, code = readLines("chart2_example.R")}
+
+```
+
+
+For this chart, I wanted to explore how checkouts by the usage varied over time. That way, the audience can determine which is the most popular form of viewing is for book checkouts. In addition, the graph shows a relatively stable/declining usage in physical book types, compared to a large spike in digital usage from around 2021. This could be tied to COVID-19 pushing a more digital agenda, and the Seattle area adapting to this pandemic accordingly to accomodate a more digitized lifestyle. 
+
+
+### Your Choice
+
+```{r, echo = FALSE, code = readLines("chart3_example.R")}
+
+```
+
+
+
+For this chart, I chose to evaluate the checkouts of J.R.R Tolkien Checkouts by Material Type. In this way, the audience can learn more about how the book landscape has changed and how technology has impacted this landscape. The chart depicts an immense popularity of audiobooks as of recent times, with the other Books, Ebooks, and Sounddiscs becoming relatively stable and low. This signals to audiobooks becoming a large market for potential investors and usage in the future, thus benefiting multiple stakeholders. 
